@@ -19,7 +19,7 @@ const images = [img1, img2, img3, img4, img5]
 
 const currentImage = ref(0)
 
-let interval = nullnull
+let interval = null
 
 onMounted(() => {
   interval = setInterval(() => {
@@ -28,7 +28,10 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  clearInterval(interval)
+  if (interval) {
+    clearInterval(interval)
+    interval = null
+  }
 })
 const route = useRoute()
 
