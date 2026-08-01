@@ -198,13 +198,6 @@ onMounted(async () => {
         class="team-card"
       >
         <div class="card bg-cream border-0 shadow-sm text-center p-4 h-100">
-          <img
-            :src="member.image"
-            class="rounded-circle team-image mx-auto mb-3"
-            data-aos="slide-left"
-            data-aos-once="false"
-          />
-
           <h5 class="fw-bold" data-aos="slide-right" data-aos-once="false">
             {{ member.name }}
           </h5>
